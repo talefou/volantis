@@ -1,11 +1,11 @@
 <script type="module">
   import { init } from '<%- theme.cdn.waline_js %>';
 
-  volantis.layoutHelper("comments", `<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  volantis.layoutHelper("comments", `<div id="waline"><i class="fa-light fa-cog fa-spin fa-fw fa-2x"></i></div>`)
 
   function p_waline() {
     if (!document.querySelector("#waline")) return;
-    
+
     let locale = {};
     let path = pdata.commentPath;
     let pagePlaceholder = pdata.commentPlaceholder || "<%= theme.comments.waline.placeholder %>";

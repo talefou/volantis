@@ -55,11 +55,11 @@
       txt-ellipsis()
       flex-shrink: 0
       line-height: $navbar-height
-      padding: 0 $gap * 0.5
+      padding: 0 $gap*0.5
       font-size: $fontsize-h3
       font-family: $fontfamily-logo
       img
-        height: $navbar-height
+        height $navbar-height
         padding $gap * 0.5
       @media screen and (max-width: $device-mobile)
         img
@@ -229,6 +229,7 @@ ul.nav-list-h
     >a
       -webkit-font-smoothing: antialiased
       -moz-osx-font-smoothing: grayscale
+      font-weight: 600
 
 ul.list-v
   z-index: 1

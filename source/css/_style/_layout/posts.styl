@@ -1,7 +1,10 @@
 .article-title
-  font-weight: 500
+  font-weight: bold
   margin-bottom: $gap * 0.75
   line-height: 1.4
+  text-align: left;
+  border-left: var(--color-h1) 8px solid;
+  padding-left: 10px;
   a
     color: var(--color-h1)
     &:hover
@@ -34,7 +37,7 @@
   border-top: 4px dotted alpha($color-text, 0.1)
 
 .meta-v3
-  margin-top: $gap
+  //margin-top: $gap
   padding-top: $gap * 0.75
   display: flex
   flex-wrap: wrap
@@ -44,6 +47,7 @@
     display: flex
     align-items: center
     user-select: none
+    flex-wrap: wrap
   time
     font-size: $fontsize-meta
   .category-link
@@ -54,7 +58,10 @@
     &:hover
       color: $color-hover
   .readmore
+    color: var(--color-meta);
     font-weight: bold
+    &:hover
+      color: #ff5722
   .avatar
     line-height: 0
     margin-right: .75em
@@ -85,11 +92,11 @@
     object-fit: cover
     width: 100%
     height: 100%
-    transition: none
-    &:hover
-      transform: none
+    transition transform 3s ease-out
+    //&:hover
+    //  transform: scale(1.1)
     &.lazyload:not(.placeholder)
-      transition: none
+      transition transform 3s ease-out, opacity .5s ease-out
       &:not(.loaded)
         opacity: 0
       &.loaded

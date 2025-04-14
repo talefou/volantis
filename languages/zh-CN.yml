@@ -5,7 +5,7 @@ navbar:
 
 post:
   pin: 置顶
-  readmore: <i class='fa-light fa-books'></i> 阅读更多
+  readmore: 阅读全文
   readoriginal: 去源站阅读
   wordcount: '字数：%s 字'
   duration: '时长：%s 分钟'
@@ -30,7 +30,7 @@ post:
     license: 许可协议
 
 footer:
-  license: '博客内容遵循 [署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)'
+  license: '博客内容遵循 [署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)'
   use: 本站使用
   theme: 作为主题
   total_views: 总访问量为

@@ -2,23 +2,20 @@
 // 自定义样式 提供可复用的样式  //
 //============================//
 
-
-
 //======================================//
 // 页脚自定义响应式处理
 .footerMax560
   @media screen and (max-width: 560px)
-    display: none
+    display none
 
 .footerMax490
   @media screen and (max-width: 490px)
-    display: none
+    display none
 
 .footerMax380
   @media screen and (max-width: 380px)
-    display: none
+    display none
 //======================================//
-
 
 
 //======================================//
@@ -56,7 +53,6 @@ details summary,
 //======================================//
 
 
-
 //======================================//
 // 文章页导航栏标题居中、加粗等
 .l_header #wrapper.sub .nav-sub .title
@@ -70,57 +66,37 @@ details summary,
 //======================================//
 
 
-
-//======================================//
-// 移动端不显示卡片
-#safearea
-  @media screen and (max-width: $device-mobile)
-    margin: 0
-    box-shadow: none
-    .body-wrapper
-      padding: 0
-    #l_main
-      article#comments,
-      article#friends,
-      article#post,
-      article#page,
-      article#arc      
-        border-radius: 0
-      article#cat,
-      article#tag
-        margin: 0
-        border-radius: 0
-      .post-wrapper
-        margin: 0 0 16px
-        .post
-          border-radius: 0
-    #l_side
-      .widget.mobile
-        border-radius: 0
-//======================================//
-
-
-
 //======================================//
 // 自定义淡入淡出
 .content-in
-  animation: content-fadeIn
-  animation-duration: 1s
-.content-out
-  animation: content-fadeOut
-  animation-duration: 1s
-@keyframes content-fadeIn {
-  0% {opacity: 0;}
-  50% {opacity: 0;}
-  100% {opacity: 1;}
-}
-@keyframes content-fadeOut {
-  0% {opacity: 1;}
-  50% {opacity: 0;}
-  100% {opacity: 0;}
-}
+  animation content-fadeIn 1s ease-in-out
+@keyframes content-fadeIn
+  0%
+    opacity 0
+    filter blur(10px)
+    transform: scale(0.9)
+  50%
+    opacity 0
+    filter blur(10px)
+    transform: scale(0.95)
+  100%
+    opacity 1
+    filter blur(0px)
+    transform: scale(1)
+@keyframes content-fadeIn-2s
+  0%
+    opacity 0
+    filter blur(10px)
+  50%
+    opacity 0
+    filter blur(10px)
+  70%
+    opacity 0
+    filter blur(10px)
+  100%
+    opacity 1
+    filter blur(0px)
 //======================================//
-
 
 
 //======================================//
@@ -136,4 +112,46 @@ details summary,
     position: absolute;
     background-size: 160px;
     background-repeat: no-repeat;
+//======================================//
+
+
+//======================================//
+// Nextblogger
+.nextblogger
+  padding: 20px 10px 10px;
+  .site-author-image
+    display: block;
+    margin: 0 auto;
+    padding: 2px;
+    max-width: 120px;
+    height: auto;
+    border: 1px solid #eee;
+    opacity: 1;
+    border-radius: 100%;
+  .site-author-box
+    margin-top: 1rem;
+    text-align: center;
+    .site-author-name
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--color-text);
+      margin: 0;
+    .site-author-description
+      color: var(--color-list);
+      margin-top: 2px;
+      text-align: center;
+      font-size: 0.85rem;
+  .links-of-author
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: center;
+    a
+      color: var(--color-list);
+      &:hover
+        color: #f9a972;
+  .links-of-author-item
+    margin: 0 4px;
+    font-size: 1.05rem;
+    color: var(--text-color);
 //======================================//

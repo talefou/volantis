@@ -8,10 +8,10 @@ let SearchService = (() => {
       <form id="u-search-modal-form" class="u-search-form" name="uSearchModalForm">
         <input type="text" id="u-search-modal-input" class="u-search-input" />
         <button type="submit" id="u-search-modal-btn-submit" class="u-search-btn-submit">
-          <span class="fa-solid fa-search"></span>
+          <span class="fa-light fa-search"></span>
         </button>
       </form>
-      <a id="u-search-btn-close" class="btn-close"> <span class="fa-solid fa-times"></span> </a>
+      <a id="u-search-btn-close" class="btn-close"> <span class="fa-light fa-times"></span> </a>
     </header>
     <main class="modal-body">
       <ul class="modal-results"></ul>
@@ -64,7 +64,7 @@ let SearchService = (() => {
     results += fn.buildResultList(fn.data.pages);
     results += fn.buildResultList(fn.data.posts);
     if (results === "") {
-      results = `<div id="resule-hits-empty"><i class="fa-solid fa-box-open"></i><p>${volantis.GLOBAL_CONFIG.languages.search.hits_empty.replace(/\$\{query}/, fn.queryText)}</p></div>`
+      results = `<div id="resule-hits-empty"><i class="fa-light fa-box-open"></i><p>${volantis.GLOBAL_CONFIG.languages.search.hits_empty.replace(/\$\{query}/, fn.queryText)}</p></div>`
     }
     document.querySelector("#u-search .modal-results").innerHTML = results;
     document.addEventListener("keydown", function f(event) {

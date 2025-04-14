@@ -107,13 +107,13 @@ jquery:
   static: true
   cdnjs: true
 fontawesome:
-  name: "@fortawesome/fontawesome-pro"
+  name: "@fortawesome/fontawesome-free"
   cdnjs_name: font-awesome
   file: css/all.min.css
   version: 6.6.0
-  npm: false
+  npm: true
   static: true
-  cdnjs: false
+  cdnjs: true
 katex_js:
   name: katex
   cdnjs_name: KaTeX
@@ -328,7 +328,7 @@ waline_js:
   name: "@waline/client"
   cdnjs_name: waline
   file: dist/waline.js
-  version: 3.0.0-alpha.11
+  version: 3.3.2
   npm: true
   static: false
   cdnjs: true

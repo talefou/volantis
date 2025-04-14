@@ -1,20 +1,20 @@
 let SearchService = (() => {
   const fn = {};
-  let search, algolia, timerId; 
+  let search, algolia, timerId;
   fn.queryText = null;
   fn.template = `<div id="u-search">
   <div class="modal">
     <header class="modal-header" class="clearfix">
       <button type="submit" id="u-search-modal-btn-submit" class="u-search-btn-submit">
-        <span class="fa-solid fa-search"></span>
+        <span class="fa-light fa-search"></span>
       </button>
       <div id="algolia-search-input"></div>
-      <a id="u-search-btn-close" class="btn-close"> <span class="fa-solid fa-times"></span> </a>
+      <a id="u-search-btn-close" class="btn-close"> <span class="fa-light fa-times"></span> </a>
     </header>
     <main class="modal-body">
       <div id="algolia-search-results">
         <div id="algolia-hits">
-          <div class="search-icon"><i class="fa-sharp fa-solid fa-telescope"></i></i></div>
+          <div class="search-icon"><i class="fa-sharp fa-light fa-telescope"></i></i></div>
         </div>
       </div>
     </main>
@@ -119,7 +119,7 @@ let SearchService = (() => {
         },
         empty: function (data) {
           return (
-            `<div id="resule-hits-empty"><i class="fa-solid fa-box-open"></i><p>${volantis.GLOBAL_CONFIG.languages.search.hits_empty.replace(/\$\{query}/, data.query)}</p></div>`
+            `<div id="resule-hits-empty"><i class="fa-light fa-box-open"></i><p>${volantis.GLOBAL_CONFIG.languages.search.hits_empty.replace(/\$\{query}/, data.query)}</p></div>`
           )
         }
       }
