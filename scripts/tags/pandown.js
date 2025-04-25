@@ -15,7 +15,7 @@ hexo.extend.tag.register('pandown', function(args) {
     if (args.length < 4) {
         return;
     } else if (args[0].trim() === 'yun') {
-        return '<p>对不起，pandown-tags不支持自定义</p><br><p>Sorry, pandown-tags does not support customization</p>'
+        return '<p>抱歉，pandown-tags 不支持自定义</p><br><p>Sorry, pandown-tags does not support customization</p>'
     } else {
         type = args[0].trim();
         url = args[1].trim();
