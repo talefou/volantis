@@ -116,7 +116,7 @@ let SearchService = (() => {
         },
         empty: function (data) {
           return (
-            `<div id="resule-hits-empty"><i class="fa-light fa-box-open"></i><p>${volantis.GLOBAL_CONFIG.languages.search.hits_empty.replace(/\$\{query}/, data.query)}</p></div>`
+            `<div id="resule-hits-empty"><i class="fa-light fa-box-alt"></i><p>${volantis.GLOBAL_CONFIG.languages.search.hits_empty.replace(/\$\{query}/, data.query)}</p></div>`
           )
         }
       }

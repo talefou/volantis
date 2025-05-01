@@ -64,7 +64,7 @@ let SearchService = (() => {
     results += fn.buildResultList(fn.data.pages);
     results += fn.buildResultList(fn.data.posts);
     if (results === "") {
-      results = `<div id="resule-hits-empty"><i class="fa-light fa-box-open"></i><p>${volantis.GLOBAL_CONFIG.languages.search.hits_empty.replace(/\$\{query}/, fn.queryText)}</p></div>`
+      results = `<div id="resule-hits-empty"><i class="fa-light fa-box-alt"></i><p>${volantis.GLOBAL_CONFIG.languages.search.hits_empty.replace(/\$\{query}/, fn.queryText)}</p></div>`
     }
     document.querySelector("#u-search .modal-results").innerHTML = results;
     document.addEventListener("keydown", function f(event) {
