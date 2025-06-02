@@ -2,20 +2,23 @@
 // 自定义样式 提供可复用的样式  //
 //============================//
 
+
+
 //======================================//
 // 页脚自定义响应式处理
 .footerMax560
   @media screen and (max-width: 560px)
-    display none
+    display: none
 
 .footerMax490
   @media screen and (max-width: 490px)
-    display none
-
+    display: none
+    
 .footerMax380
   @media screen and (max-width: 380px)
-    display none
+    display: none
 //======================================//
+
 
 
 //======================================//
@@ -53,9 +56,33 @@ details summary,
 //======================================//
 
 
+
 //======================================//
-// 文章页导航栏标题居中、加粗等
-.l_header #wrapper.sub .nav-sub .title
+// 隐藏文本
+// <span class="bb_spoiler" title="xxxx">xxxx</span>
+.bb_spoiler, .bb_spoiler a, a .bb_spoiler, .bb_spoiler a.new
+  cursor: $pointer,pointer
+  border-bottom 1px solid
+  border-color var(--color-p)
+  background-color var(--color-card)
+  color var(--color-card)
+  text-shadow none
+  padding 0 2px
+  margin 0 2px
+.bb_spoiler:hover, .bb_spoiler:active,
+  .bb_spoiler:hover .bb_spoiler, .bb_spoiler:active .bb_spoiler
+  color var(--color-p) !important
+.bb_spoiler
+  &:hover
+    opacity 1
+    transition-duration 0.3s
+//======================================//
+
+
+
+//======================================//
+// 文章页导航栏修饰：居中、加粗等
+.fix-header-title
   margin: 0 auto
   font-size: 1.5rem
   overflow: hidden
@@ -66,40 +93,29 @@ details summary,
 //======================================//
 
 
+
 //======================================//
-// 自定义淡入淡出
+// 自定义的淡入淡出
 .content-in
-  animation content-fadeIn 1s ease-in-out
-@keyframes content-fadeIn
-  0%
-    opacity 0
-    filter blur(10px)
-    transform: scale(0.9)
-  50%
-    opacity 0
-    filter blur(10px)
-    transform: scale(0.95)
-  100%
-    opacity 1
-    filter blur(0px)
-    transform: scale(1)
-@keyframes content-fadeIn-2s
-  0%
-    opacity 0
-    filter blur(10px)
-  50%
-    opacity 0
-    filter blur(10px)
-  70%
-    opacity 0
-    filter blur(10px)
-  100%
-    opacity 1
-    filter blur(0px)
+  animation: content-fadeIn
+  animation-duration: 1s
+.content-out
+  animation: content-fadeOut
+  animation-duration: 1s
+@keyframes content-fadeIn {
+  0% {opacity: 0;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes content-fadeOut {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 0;}
+}
 //======================================//
 
 
-//======================================//
+
 // HTTP 451 错误
 .note.quote.cus451:after
   @media screen and (min-width: 900px)
@@ -112,7 +128,27 @@ details summary,
     position: absolute;
     background-size: 160px;
     background-repeat: no-repeat;
+
+
+
 //======================================//
+// 评论隐私
+.comment-policy
+  background-color: #ebeef2;
+  position: relative;
+  margin-bottom: $gap-p
+  background-position: right 20px top 20px;
+  border: none;
+  border-radius: 4px;
+  .content
+    padding: 15px;
+    .comment-policy-title
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.45em !important;
+    .comment-policy-link
+      font-size: 14px;
+
 
 
 //======================================//
