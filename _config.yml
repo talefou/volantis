@@ -202,6 +202,9 @@ pages:
   # 友链页面配置
   friends:
     layout_scheme: traditional # simple: 简单布局, traditional: 传统布局
+    link_block_color:
+      enable: false #友链块颜色开关，用 color: '颜色' 字段
+      unified_font: false # 是否统一友链块文字，true则所有文字都会成黑，false只有
 
 ############################### Article Layout ############################### > start
 # 文章布局
@@ -752,6 +755,8 @@ plugins:
     enable: true
   friendsjs:
     enable: true
+  fpostsjs:
+    enable: true
   contributorsjs:
     enable: true
 
@@ -885,7 +890,7 @@ plugins:
         cover: '/music/Avem.jpg'
     # ============= local end ================
     # Optional
-    fixed: false      # enable fixed mode
+    fixed: false      # enable fixed mode 此处true会对footer与sidebar开启的aplayer造成影响
     theme: '#1BCDFC'  # main color
     autoplay: false   # audio autoplay
     order: list       # player play order, values: 'list', 'random'
@@ -971,7 +976,7 @@ plugins:
     expire_days: 1 # 本地文章缓存数据过期时间（天）
     js: https://npm.elemecdn.com/fcircle-theme-yyyz@1.0.13/dist/fcircle.min.js # fcircle.min.js的url
 
-  # 轻量友链朋友圈Add commentMore actions
+  # 轻量友链朋友圈
   # https://github.com/willow-god/Friend-Circle-Lite
   # https://blog.liushen.fun/posts/4dc716ec/
   fcircle_lite:
@@ -1379,3 +1384,11 @@ structured_data:
       width: 192
       height: 192
 ############################### Structured Data ############################### > end
+
+
+api_host:
+  ghapi: https://api.github.com
+  ghraw: https://raw.githubusercontent.com
+  gist: https://gist.github.com
+  # https://github.com/anuraghazra/github-readme-stats
+  ghcard: https://github-readme-stats.vercel.app
